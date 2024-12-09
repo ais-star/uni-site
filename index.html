@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Cup 2022</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+     .carousel-inner img {
+      max-height: 600px; /* Задайте желаемую максимальную высоту */
+      object-fit: cover; /* Сохраняет пропорции изображения */
+    }
+    .custom-header {
+      background-color: #2207f57e; /* Ваш выбранный цвет */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="custom-header text-white text-center py-5">
+    <h1>Чемпионат мира 2022 <span class="badge bg-warning text-dark"></span></h1>
+    <p class="lead">Главные моменты, статистика и команды</p>
+  </header>
+  
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">World Cup 2022</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#accordionSection">Обзор Финала</a></li>
+          <li class="nav-item"><a class="nav-link" href="#modalSection">Обзор всего чемпионата мира</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teams">Команды</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel with Highlights -->
+  <section id="highlights" class="my-5">
+    <h2 class="text-center">Главные моменты</h2>
+    <div id="worldCupCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://ss.sport-express.ru/userfiles/materials/184/1849680/volga.jpg" class="d-block w-100" alt="Аргентина выигрывает">
+          <div class="carousel-caption">
+            <h5>Аргентина выигрывает чемпионат!</h5>
+            <p>Аргентинцы завоевали свой третий титул.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.aa.com.tr/uploads/userFiles/497fe118-9814-4054-9c36-e40f78694f44/20221218_2_56482980_83933471.jpg" class="d-block w-100" alt="Лионель Месси">
+          <div class="carousel-caption">
+            <h5>Лионель Месси - лучший игрок турнира</h5>
+            <p>Месси привел свою команду к победе.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="final.jpg" class="d-block w-100" alt="Финал">
+          <div class="carousel-caption">
+            <h5>Невероятный финал</h5>
+            <p>Финальная игра против Франции запомнится на века.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#worldCupCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#worldCupCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Accordion Section -->
+  <section id="accordionSection" class="container my-5">
+    <h2 class="text-center">Информация</h2>
+    <div class="accordion" id="infoAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            История турнира
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#infoAccordion">
+          <div class="accordion-body">
+            Чемпионат мира - это один из самых популярных спортивных турниров в мире.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Лучшие игроки
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+          <div class="accordion-body">
+            Лионель Месси, Килиан Мбаппе и многие другие оставили свой след.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Награды турнира
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+          <div class="accordion-body">
+            Кубок мира, Золотая бутса и множество других наград.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Section -->
+  <section id="modalSection" class="text-center my-5">
+    <h2>Интересный факт</h2>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Подробнее</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Модальное окно</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           Финал Чемпионата Мира по футболу смотрела половина человечества.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs Section -->
+  <section id="tabsSection" class="container my-5">
+    <h2 class="text-center">Доп.Информация</h2>
+    <ul class="nav nav-tabs" id="worldCupTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button">Лучшие</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button">Мнение большинства</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button">Проблемы</button>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="home">Эмилиано Мартинес,Тео Эрнандес,Ромен Сес,Йошко Гвардиол,Ашраф Хакими,Софьян Амрабат,Антуан Гризманн,Лука Модрич,Килиан Мбаппе,Оливье Жиру,Лионель Месси</div>
+      <div class="tab-pane fade" id="profile">Чемпионат мира 2022 в Катаре стал незабываемым благодаря драматичному финалу между Аргентиной и Францией, где Аргентина выиграла третий титул. Лионель Месси стал главным героем турнира, получив награду лучшего игрока. Марокко удивило всех, став первым африканским полуфиналистом. Турнир также привлек внимание благодаря новым технологиям, таким как полуавтоматическое определение офсайдов. Однако чемпионат подвергся критике за организационные вопросы и нарушение прав человека в Катаре.</div>
+      <div class="tab-pane fade" id="contact">Права человека: Широкая критика за условия труда мигрантов, использование рабского труда и нарушение прав рабочих, строивших инфраструктуру.
+    <br>Климат: Турнир был перенесен на зиму из-за экстремальных температур в Катаре летом.
+      <br>  Проблемы с правами ЛГБТ: Строгие законы против ЛГБТ в стране вызвали обеспокоенность у болельщиков и участников.
+      <br>  Организация: Некоторые проблемы с инфраструктурой, например, транспорт и размещение болельщиков, также вызывали вопросы.</div>
+    </div>
+  </section>
+
+  <!-- Toast Section -->
+  <section id="toastSection" class="container my-5">
+    <h2 class="text-center"></h2>
+    <button class="btn btn-success" id="showToast">Лео Месси?</button>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Чемпионат мира</strong>
+          <small>Сейчас</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Лионель Месси стал героем ЧМ-2022, привел Аргентину к победе, выиграв свой первый титул. Он забил 7 голов, включая два в финале, и был признан лучшим игроком турнира, подтвердив свой статус одного из величайших футболистов.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Чемпионат мира 2022. Все права защищены.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const toastTrigger = document.getElementById('showToast');
+    const toastLive = document.getElementById('liveToast');
+    toastTrigger.addEventListener('click', () => {
+      const toast = new bootstrap.Toast(toastLive);
+      toast.show();
+    });
+  </script>
+</body>
+</html>
